@@ -57,4 +57,12 @@
             <version>${rxjavasreactivestream.version}</version>
         </dependency>
     </dependencies>
+
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>GitHub Code4Fun Apache Maven Packages</name>
+            <url>https://maven.pkg.github.com/code4fun/codefun-common</url>
+        </repository>
+    </distributionManagement>
 </project>
