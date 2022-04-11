@@ -2,10 +2,9 @@ package id.codefun.common.model.response;
 
 import java.io.Serializable;
 
-public class BaseResponse implements Serializable {
+import lombok.NoArgsConstructor;
 
-    public BaseResponse(){
-        
-    }
+@NoArgsConstructor
+public class BaseResponse implements Serializable {
     
 }

@@ -16,7 +16,7 @@ import lombok.NoArgsConstructor;
 public class SpecificationRequest extends BaseRequest {
 
     @ApiModelProperty(value="JPA Specification")
-    private Specification specification;
+    private Specification<?> specification;
     
     @ApiModelProperty(value="JPA Pageable")
     private transient Pageable pageable;
