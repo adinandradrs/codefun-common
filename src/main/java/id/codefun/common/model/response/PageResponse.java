@@ -10,8 +10,8 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class PageResponse<T extends BaseResponse> extends BaseResponse {
+public class PageResponse extends BaseResponse {
 
-    private transient Page<T> page;
+    private transient Page<?> page;
 
 }
