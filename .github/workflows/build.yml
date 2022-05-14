@@ -1,39 +1,36 @@
-name: Maven Scan and Deploy
+name: Pipeline Code4fun Common
 on:
   push:
     branches:
       - master
+  pull_request:
+    types: [opened, synchronize, reopened]
 jobs:
   build:
-    name: Build & Deploy to Github Package Registry
+    name: Code4fun Common Build & Deploy to Github Package Registry
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout 
+      - name: Checkout Code4fun Common
         uses: actions/checkout@v2
         with:
           fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
-      - name: Set up JDK 11
+      - name: Set up JDK 11 Code4fun Common
         uses: actions/setup-java@v1
         with:
           java-version: 11
-      - name: Cache SonarCloud packages
+      - name: Cache SonarCloud Code4fun Common packages
         uses: actions/cache@v1
         with:
           path: ~/.sonar/cache
           key: ${{ runner.os }}-sonar
           restore-keys: ${{ runner.os }}-sonar
-      - name: Cache Maven packages
+      - name: Cache Maven Code4fun Common packages
         uses: actions/cache@v1
         with:
           path: ~/.m2
           key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
           restore-keys: ${{ runner.os }}-m2
-      - name: Run Sonar Analysis
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=adinandradrs_codefun-common
-      - name: Deploy to Github Package Registry
+      - name: Code4fun Common Deploy to Github Package Registry
         env:
           GITHUB_USERNAME: ${{ secrets.BUILD_USERNAME }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
