@@ -1,5 +1,6 @@
 package id.codefun.common.model.request;
 
+import java.io.Serializable;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
 import io.swagger.annotations.ApiModelProperty;
@@ -12,7 +13,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class SpecificationRequest extends BaseRequest {
+public class SpecificationRequest extends BaseRequest implements Serializable  {
 
     @ApiModelProperty(value="JPA Specification")
     private Specification<?> specification;
