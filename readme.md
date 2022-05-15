@@ -1,5 +1,7 @@
 # Code4Fun Common
 
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=adinandradrs_codefun-common&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=adinandradrs_codefun-common)
+
 Code4Fun Common is a common library that **used as a code layout and a template for coding style**. Code4Fun Common serves a service interface that strictly implements SRP (Single Responsibility Interface) for business logic and data transformation. Every process will be execute in a single handy method using a single input, and will be only produce a single output. 
 
 It also applies for model structure such as : 
@@ -93,3 +95,5 @@ For major changes, please open an issue first to discuss what you would like to 
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
+
+[![SonarCloud](https://sonarcloud.io/images/project_badges/sonarcloud-white.svg)](https://sonarcloud.io/summary/new_code?id=adinandradrs_codefun-common)
